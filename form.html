@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Add students</title>
+
+
+</head>
+
+
+<body>
+    <div class="main">
+
+        <form id="form" action="add.php" method="post">
+
+            <div class="title">Welcome</div>
+            <div class="subtitle">Let's register a student!</div>
+            <br><br>
+
+
+            <label class="lab" for="FirstName">First name:</label><br>
+            <input type="text" id="FirstName" name="FirstName" required placeholder="Your Name" onkeydown="UpperCaseF(this)"><br><br>
+
+
+
+            <label class="lab" for="LastName">Last name:</label><br>
+            <input type="text" id="LastName" name="LastName" required placeholder="Your Last Name" onkeydown="UpperCaseF(this)"><br><br>
+
+
+            <label class="lab" for="PersonalID">Personal ID:</label><br>
+            <input type="number" id="PersonalID" name="PersonalID" required placeholder="Your ID" onKeyDown="if(this.value.length==11) return false;"><br><br>
+
+
+
+            <label class="lab" for="Grade">Grade:</label><br>
+            <input type="number" id="Grade" name="Grade" required placeholder="Your Grade" onKeyDown="if(this.value.length==2) return false;"><br><br>
+
+
+            <label class="lab" for="Email">Email:</label><br>
+            <input type="email" id="Email" name="Email" required placeholder="Your Email" onkeydown="lowerCaseF(this)"><br><br>
+
+
+            <label class="lab" for="Mess">Messege:</label><br>
+            <textarea type="text" id="Mess" name="Mess" required placeholder="Your message" rows="6"></textarea>
+
+            <br><br>
+
+
+
+            <input class="submit-btn" type="submit" value="Submit">
+            <input class="cancle-btn" type="reset" value="Cancle">
+
+            <br><br>
+
+
+        </form>
+
+        <form action="view.php">
+            <input class="show-data" type="submit" value="Show records">
+        </form>
+
+        <form action="del.php">
+            <input class="delete-btn" type="submit" value="Delete Data">
+        </form>
+
+
+
+    </div>
+</body>
+
+</html>
